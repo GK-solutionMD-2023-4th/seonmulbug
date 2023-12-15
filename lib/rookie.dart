@@ -31,7 +31,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const MyHomePage(title: '다이슨 청소기를 선물한 친구'),
     );
   }
 }
@@ -64,7 +64,7 @@ class _MyHomePageState extends State<MyHomePage> {
       // so that the display can reflect the updated values. If we changed
       // _counter without calling setState(), then the build method would not be
       // called again, and so nothing would appear to happen.
-      _counter++;
+      
     });
   }
 
@@ -91,8 +91,8 @@ class _MyHomePageState extends State<MyHomePage> {
         // in the middle of the parent.
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Container(
+          children: [
+           Container(
             alignment: Alignment.topLeft,
           // Column is also a layout widget. It takes a list of children and
           // arranges them vertically. By default, it sizes itself to fit its
@@ -107,50 +107,295 @@ class _MyHomePageState extends State<MyHomePage> {
           // TRY THIS: Invoke "debug painting" (choose the "Toggle Debug Paint"
           // action in the IDE, or press "p" in the console), to see the
           // wireframe for each widget.
-          child: 
-            const Text(
-              '다이슨청소기를 선물한 친구',
-              style: TextStyle(
-                fontSize: 30,
-                fontWeight: FontWeight.bold
-              ),
-            ),
-        ),
-        Column(
-          children: [
-          Row(
-            children: [
-              Container(
-                margin: EdgeInsets.all(13.0),
-            child: ClipOval(
-               child: Container(
-               width: 60,
-               height: 60,
-               color: Colors.blue,
-               ),
-            ),
            ),
-            Text(
-             '한서연',
-              style: TextStyle(
-                fontSize:15,
-                fontWeight: FontWeight.normal
-            ),
-          ),
-            ],
-          ),
-        ],
-        )
-        
-        
+          Column(
+           children: [
+             Row(
+              children: [
+               Container(
+                margin: EdgeInsets.all(13.0),
+                child: ClipOval(
+                  child: Container(
+                  width: 60,
+                  height: 60,
+                  color: Colors.amber,
+                  ),
+                ),
+              ),
+              Column(
+                children: [
+               Text(
+                '한서연',
+                  style: TextStyle(
+                  fontSize:17,
+                  fontWeight: FontWeight.bold
+                  ), 
+               ),
+               ClipRRect(
+                borderRadius: BorderRadius.circular(30.0), // 원하는 각을 설정
+                child: Container(
+                width: 120.0,
+                height: 40.0,
+                color: Colors.blue,
+                child: Center(
+                  child: Text(
+                   '감동카드 보내기',
+                    style: TextStyle(color: Colors.white),
+                  ),
+                ),
+                ),
+              )
+
+                ],
+              ),
+              ],
+             ),
+             Row(
+              children: [
+               Container(
+                margin: EdgeInsets.all(13.0),
+                child: ClipOval(
+                  child: Container(
+                  width: 60,
+                  height: 60,
+                  color: Colors.amber,
+                  ),
+                ),
+              ),
+              Column(
+                children: [
+               Text(
+                '한서연',
+                  style: TextStyle(
+                  fontSize:17,
+                  fontWeight: FontWeight.bold
+                  ), 
+               ),
+               ClipRRect(
+                borderRadius: BorderRadius.circular(30.0), // 원하는 각을 설정
+                child: Container(
+                width: 120.0,
+                height: 40.0,
+                color: Colors.blue,
+                child: Center(
+                  child: Text(
+                   '감동카드 보내기',
+                    style: TextStyle(color: Colors.white),
+                  ),
+                ),
+                ),
+              )
+
+                ],
+              ),
+              ],
+             ),
+             Row(
+              children: [
+               Container(
+                margin: EdgeInsets.all(13.0),
+                child: ClipOval(
+                  child: Container(
+                  width: 60,
+                  height: 60,
+                  color: Colors.amber,
+                  ),
+                ),
+              ),
+              Column(
+                children: [
+               Text(
+                '한서연',
+                  style: TextStyle(
+                  fontSize:17,
+                  fontWeight: FontWeight.bold
+                  ), 
+               ),
+               ClipRRect(
+                borderRadius: BorderRadius.circular(30.0), // 원하는 각을 설정
+                child: Container(
+                width: 120.0,
+                height: 40.0,
+                color: Colors.blue,
+                child: Center(
+                  child: Text(
+                   '감동카드 보내기',
+                    style: TextStyle(color: Colors.white),
+                  ),
+                ),
+                ),
+              )
+
+                ],
+              ),
+              ],
+             ),
+             Row(
+              children: [
+               Container(
+                margin: EdgeInsets.all(13.0),
+                child: ClipOval(
+                  child: Container(
+                  width: 60,
+                  height: 60,
+                  color: Colors.amber,
+                  ),
+                ),
+              ),
+              Column(
+                children: [
+               Text(
+                '한서연',
+                  style: TextStyle(
+                  fontSize:17,
+                  fontWeight: FontWeight.bold
+                  ), 
+               ),
+               ClipRRect(
+                borderRadius: BorderRadius.circular(30.0), // 원하는 각을 설정
+                child: Container(
+                width: 120.0,
+                height: 40.0,
+                color: Colors.blue,
+                child: Center(
+                  child: Text(
+                   '감동카드 보내기',
+                    style: TextStyle(color: Colors.white),
+                  ),
+                ),
+                ),
+              )
+
+                ],
+              ),
+              ],
+             ),
+             Row(
+              children: [
+               Container(
+                margin: EdgeInsets.all(13.0),
+                child: ClipOval(
+                  child: Container(
+                  width: 60,
+                  height: 60,
+                  color: Colors.amber,
+                  ),
+                ),
+              ),
+              Column(
+                children: [
+               Text(
+                '한서연',
+                  style: TextStyle(
+                  fontSize:17,
+                  fontWeight: FontWeight.bold
+                  ), 
+               ),
+               ClipRRect(
+                borderRadius: BorderRadius.circular(30.0), // 원하는 각을 설정
+                child: Container(
+                width: 120.0,
+                height: 40.0,
+                color: Colors.blue,
+                child: Center(
+                  child: Text(
+                   '감동카드 보내기',
+                    style: TextStyle(color: Colors.white),
+                  ),
+                ),
+                ),
+              )
+
+                ],
+              ),
+              ],
+             ),
+             Row(
+              children: [
+               Container(
+                margin: EdgeInsets.all(13.0),
+                child: ClipOval(
+                  child: Container(
+                  width: 60,
+                  height: 60,
+                  color: Colors.amber,
+                  ),
+                ),
+              ),
+              Column(
+                children: [
+               Text(
+                '한서연',
+                  style: TextStyle(
+                  fontSize:17,
+                  fontWeight: FontWeight.bold
+                  ), 
+               ),
+               ClipRRect(
+                borderRadius: BorderRadius.circular(30.0), // 원하는 각을 설정
+                child: Container(
+                width: 120.0,
+                height: 40.0,
+                color: Colors.blue,
+                child: Center(
+                  child: Text(
+                   '감동카드 보내기',
+                    style: TextStyle(color: Colors.white),
+                  ),
+                ),
+                ),
+              )
+
+                ],
+              ),
+              ],
+             ),
+             Row(
+              children: [
+               Container(
+                margin: EdgeInsets.all(13.0),
+                child: ClipOval(
+                  child: Container(
+                  width: 60,
+                  height: 60,
+                  color: Colors.amber,
+                  ),
+                ),
+              ),
+              Column(
+                children: [
+               Text(
+                '한서연',
+                  style: TextStyle(
+                  fontSize:17,
+                  fontWeight: FontWeight.bold
+                  ), 
+               ),
+               ClipRRect(
+                borderRadius: BorderRadius.circular(30.0), // 원하는 각을 설정
+                child: Container(
+                width: 120.0,
+                height: 40.0,
+                color: Colors.blue,
+                child: Center(
+                  child: Text(
+                   '감동카드 보내기',
+                    style: TextStyle(color: Colors.white),
+                  ),
+                ),
+                ),
+              )
+
+                ],
+              ),
+              ],
+             ),
+           ],
+           
+          )
         ],
         ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
+      ),// This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }
