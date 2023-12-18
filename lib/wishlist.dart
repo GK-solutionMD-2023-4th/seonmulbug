@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:percent_indicator/percent_indicator.dart';
+
 
 class MyApp extends StatelessWidget {
   @override
@@ -21,11 +23,13 @@ class MyHomePage extends StatefulWidget {
 var gift  = [ 
     {
       "giftname": "Apple 애플워치 9 GPS",
-      "imageUrl": '/Users/hongseyeon/Desktop/seonmulbug/assets/image_applewatch.png',
+      "price": "599,000",
+      "imageUrl": 'assets/image/image_applewatch.png',
     },
     {
       "giftname": "Apple 맥북 프로 13 M2",
-      "imageUrl": '/Users/hongseyeon/Desktop/seonmulbug/assets/image_Macbook.png',
+      "price": '1,833,990',
+      "imageUrl": 'assets/image/image_Macbook.png',
     },
   ];
 
@@ -68,65 +72,97 @@ class _MyHomePageState extends State<MyHomePage> {
               itemBuilder: (BuildContext con, int index) {
                 return postContainer( //리스트를 빌드할 때, 포스터 컨테이너에서 UI 내용을 받아오겠다.
                   giftname: gift[index]["giftname"] as String, //제목은 gift 리스트에 저장되어 있는 "title"이고, 문자열이다.
-                  imageUrl: gift[index]["imageUrl"] as String, //이미지url은 gift 리스트에 저장되어 있는 "imageUrl"이고, 문자열이다.
+                  imageUrl: gift[index]["imageUrl"] as String,
+                  price: gift[index]["price"] as String,  
           );
               },
             ),
           ),
         ],
       ),
-      floatingActionButton: FloatingActionButton.extended(
-        onPressed: (){},
-        icon: SizedBox(
-           height: 70,
-           width: 250,
-        ),
+      
+    );
+  }
+}
+
+Widget postContainer({String giftname = '', String imageUrl = '', String price = ''}) {
+  return Column(
+    children: [
+      Row(
+        children: [
+          Container(
+            padding:EdgeInsets.fromLTRB(20, 20, 0, 10),
+            width: 130,
+            height: 130,
+            child: Image.asset(
+              imageUrl,
+              fit: BoxFit.cover,
+            ),
+          ),
+          Container(
+            padding: const EdgeInsets.all(10),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Container(
+                padding: EdgeInsets.fromLTRB(10, 0, 0, 5),
+                child : Text(
+                  giftname,
+                  style: const TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                ),
+                LinearPercentIndicator(
+                  width: 250,
+                  lineHeight: 20,
+                  percent: 0.9,
+                  progressColor: Colors.blue,
+                ),
+                Container(
+                 padding: EdgeInsets.fromLTRB(170, 5, 0, 5),
+                 child: Text(
+                 price,
+                 textAlign: TextAlign.right,
+                 style: const TextStyle(
+                   fontSize: 15,
+                   fontWeight: FontWeight.bold,
+                 ),
+                ),
+                ),
+
+                // Text(
+                //   padding:EdgeInsets.fromLTRB(0, 5, 0, 5),
+                //   textAlign: TextAlign.right,
+                //   price,
+                //   style: const TextStyle(
+                //     fontSize: 20,
+                //     fontWeight: FontWeight.bold,
+                //   ),
+                // ),
+              ],
+            ),
+          ),
+        ],
+      ),
+      FloatingActionButton.extended(
+        onPressed: () {},
         label: Row(
-           mainAxisAlignment: MainAxisAlignment.center, // 수평 가운데 정렬
-           children: [
-            SizedBox(width: 8), // 아이콘과 텍스트 사이 간격 조절
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            SizedBox(width: 8),
             Text('펀딩하기'),
           ],
+        ),
+        icon: SizedBox(
+          height: 70,
+          width: 250,
         ),
         backgroundColor: Colors.blue,
         elevation: 0,
         shape: RoundedRectangleBorder(),
       ),
-    );
-  }
-}
-
-Widget postContainer({String giftname = '', String imageUrl = ''}) {
-return Column(
-      crossAxisAlignment: CrossAxisAlignment.start, 
-      children: [
-          Container( //이 콘테이너는 이미지의 디자인을 다루고 있다
-            width: 130,
-            height: 130,
-            child: Image.asset( 
-              imageUrl, 
-              fit: BoxFit.cover,
-            ),
-          ),
-          Container( //이 콘테이너는 플로팅 액션 버튼을 이제 할거다
-            width: 300,
-            height: 70,
-          ),
-          Container(
-            padding: const EdgeInsets.all(10),
-            child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start, 
-            children: [
-             Text(
-               giftname,
-               style: const TextStyle(
-                fontSize: 20,
-               fontWeight: FontWeight.bold,
-               ),
-             ),
-            ],
-           ),
-          ),
-      ],
-    );
+    ],
+  );
 }
