@@ -18,14 +18,32 @@ class MyHomePage extends StatefulWidget {
   State<MyHomePage> createState() => _MyHomePageState();
 }
 
+// child: Text(
+//                  price,
+//                  textAlign: TextAlign.right,
+//                  style: const TextStyle(
+//                    fontSize: 15,
+//                    fontWeight: FontWeight.bold,
+//                  ),
+//                 ),
+
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Column(
         children: [
-          Text('펀딩 금액을 입력하세요'),
+          SizedBox(height: 200),
+          Text(
+          '펀딩 금액을 입력하세요',
+           style: const TextStyle(
+            fontSize: 25,
+            fontWeight: FontWeight.bold
+           ),
+           ),
+          SizedBox(height: 50),
           TextField(
+            cursorWidth: 250,
             decoration: InputDecoration(
           	border: OutlineInputBorder(),        
             )
