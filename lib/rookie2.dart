@@ -173,14 +173,28 @@ class _MyHomePageState extends State<MyHomePage> {
           )
           ],//children
         ),
+        SizedBox(height: 72),
+      Align(
+        alignment: Alignment.bottomCenter,
+      child: Container(
+        width: 390,
+        height: 49,
+        color: Colors.blue,
+          child: Center(
+          child: Text(
+           '감동카드 보내기',
+           style: TextStyle(
+                  fontFamily: 'NanumGothic',
+                  fontSize:25,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.black,
+                  ), 
+          ),
+          ),
+      )
+      )
+        
         ],
-      ),
-
-      floatingActionButton: FloatingActionButton(
-      child: Text('test'),//Icon(Icons.add),
-      onPressed: () {
-      // Handle the button press
-      },
       ),
 
      
