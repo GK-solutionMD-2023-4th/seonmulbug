@@ -168,18 +168,13 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
 
             
-
-            // 추천하는 선물 부분
-            SizedBox(height: 16),
-            Text(
-              '추천하는 선물',
-              style: TextStyle(
-                fontSize: 18,
-                fontWeight: FontWeight.bold,
-              ),
+            Container(
+             width: 200,
+             height: 100,
+             color: Colors.grey,
             ),
-            SizedBox(height: 8),
-            // TODO: 추천하는 선물을 나타내는 부분을 추가
+
+            
           ],
         ),
       ),
