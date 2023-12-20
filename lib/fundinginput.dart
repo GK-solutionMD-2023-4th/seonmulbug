@@ -18,15 +18,6 @@ class MyHomePage extends StatefulWidget {
   State<MyHomePage> createState() => _MyHomePageState();
 }
 
-// child: Text(
-//                  price,
-//                  textAlign: TextAlign.right,
-//                  style: const TextStyle(
-//                    fontSize: 15,
-//                    fontWeight: FontWeight.bold,
-//                  ),
-//                 ),
-
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
@@ -35,37 +26,39 @@ class _MyHomePageState extends State<MyHomePage> {
         children: [
           SizedBox(height: 200),
           Text(
-          '펀딩 금액을 입력하세요',
+          '펀딩 금액을 입력해주세요',
            style: const TextStyle(
             fontSize: 25,
             fontWeight: FontWeight.bold
            ),
            ),
           SizedBox(height: 50),
-          TextField(
-            cursorWidth: 250,
-            decoration: InputDecoration(
-          	border: OutlineInputBorder(),        
-            )
-          )
+          Container(
+             width: 337, // 너비 조절
+             child: TextField(
+               cursorWidth: 2,
+               decoration: InputDecoration(
+                border: OutlineInputBorder(),
+               ),
+             ),
+          ),
+          Container(
+          margin: EdgeInsets.fromLTRB(26, 20, 26, 0),
+          width: 337,
+          height: 49,
+          color: Colors.blue,
+          child: Center(
+            child: Text(
+              '감동카드 보내고 결제하기',
+              style: TextStyle(
+               color: Colors.white, // 텍스트 색상 변경
+               fontWeight: FontWeight.normal, // 폰트 굵기 변경
+               fontSize: 25, // 폰트 크기 변경
+              ),
+            ),
+          ),
+         ),
         ]
-      ),
-      floatingActionButton: FloatingActionButton.extended(
-        onPressed: (){},
-        icon: SizedBox(
-           height: 70,
-           width: 250,
-        ),
-        label: Row(
-           mainAxisAlignment: MainAxisAlignment.center, // 수평 가운데 정렬
-           children: [
-            SizedBox(width: 8), // 아이콘과 텍스트 사이 간격 조절
-            Text('감동카드 보내고 결제하기'),
-          ],
-        ),
-        backgroundColor: Colors.blue,
-        elevation: 0,
-        shape: RoundedRectangleBorder(),
       ),
     );
   }
