@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 //import 'package:seonmulbug/wishlist.dart';
 //import 'package:seonmulbug/fundinginput.dart';
-import 'rookie2.dart';
+import 'rookie3.dart';
 
 
 

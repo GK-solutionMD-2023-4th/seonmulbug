@@ -49,61 +49,66 @@ class _MyHomePageState extends State<MyHomePage> {
 
       ),
       body: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.start,
         children: [
-      ListView(
-        shrinkWrap: true,
-        // Center is a layout widget. It takes a single child and positions it
-        // in the middle of the parent.
-          children: [
-           Container(
-            alignment: Alignment.topLeft,
-           ),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-           children: [
-            Container(
-              margin: EdgeInsets.all(22.0),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                Text(
-                '한서연님 에게 주는 선물',
-                  style: TextStyle(
-                  fontSize:25,
-                  fontWeight: FontWeight.bold
-                  ), 
-                  textAlign: TextAlign.center,
-               ),
-                ],
-              ),
-            ),
-            
-                
-              
-          
-           ],//children
-          )
-          ],//children
-        ),
-        SizedBox(height: 72),
-      Align(
+        Container(height: 200),
+       Align(
         alignment: Alignment.bottomCenter,
-      child: Container(
+      child: Column(
+      children: [
+        Container(
         width: 390,
         height: 49,
-        color: Colors.blue,
+        color: Colors.white,
           child: Center(
           child: Text(
-           '감동카드 보내기',
+           '감동카드를 보냈습니다🎉',
            style: TextStyle(
                   fontFamily: 'NanumGothic',
-                  fontSize:25,
+                  fontSize:28,
                   fontWeight: FontWeight.bold,
                   color: Colors.black,
                   ), 
           ),
           ),
-      )
+      ),
+        SizedBox(height: 64),
+        Container(
+        width: 390,
+        height: 49,
+        color: Color.fromARGB(255, 13, 141, 246),
+          child: Center(
+          child: Text(
+           '홈화면으로 이동하기',
+           style: TextStyle(
+                  fontFamily: 'NanumGothic',
+                  fontSize:20,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                  ), 
+          ),
+          ),
+      ),
+      SizedBox(height: 17),
+      Container(
+        width: 390,
+        height: 49,
+        color: Colors.blue,
+          child: Center(
+          child: Text(
+           '위시리스트로 이동하기',
+           style: TextStyle(
+                  fontFamily: 'NanumGothic',
+                  fontSize:20,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                  ), 
+          ),
+          ),
+      ),
+      ],
+      ),
       )
         
         ],
