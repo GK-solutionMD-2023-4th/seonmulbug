@@ -1,59 +1,31 @@
 import 'package:flutter/material.dart';
 
-
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
+class MyApp4 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.white),
-        useMaterial3: true,
+        primarySwatch: Colors.blueGrey,
       ),
-      home: const MyHomePage(title: ''),
+      home: MyHomePage(),
     );
   }
 }
 
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
-  final String title;
-
   @override
   State<MyHomePage> createState() => _MyHomePageState();
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  
-
-  void _incrementCounter() {
-    setState(() {
-      // This call to setState tells the Flutter framework that something has
-      // changed in this State, which causes it to rerun the build method below
-      // so that the display can reflect the updated values. If we changed
-      // _counter without calling setState(), then the build method would not be
-      // called again, and so nothing would appear to happen.
-      
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.white,
-        title: Text(widget.title),
-        leading: IconButton(icon: Icon(Icons.arrow_back_ios_new), onPressed: null),
-
-      ),
       body: Column(
         children: [
       ListView(
         shrinkWrap: true,
-        // Center is a layout widget. It takes a single child and positions it
-        // in the middle of the parent.
           children: [
            Container(
             alignment: Alignment.topLeft,
@@ -161,28 +133,81 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
               ),
               SizedBox(height: 10),
-              ClipRRect(
-                borderRadius: BorderRadius.circular(10.0), // 적절한 반경 값으로 수정
-                child: Container(
-                 width: 330, // 이미지 너비에 맞게 수정
-                 height: 170, // 이미지 높이에 맞게 수정
-                 color: const Color.fromARGB(255, 223, 223, 223),
+              Container(
+               width: 337,
+               height: 100, // 너비 조절
+               child: TextField(
+                 cursorWidth: 2,
+                 decoration: InputDecoration(
+                  border: OutlineInputBorder(),
                  ),
-                ),
+               ),
+          ),
            ],//children
           )
           ],//children
         ),
-        SizedBox(height: 72),
+
+      Container(
+        margin: EdgeInsets.fromLTRB(20, 30, 0, 0),
+        child: Align(
+        alignment : Alignment.centerLeft,
+        child: Text(
+          '결제정보',
+           style: TextStyle(
+            fontWeight: FontWeight.bold, // 폰트 굵기 변경
+            fontSize: 25, // 폰트 크기 변경
+              ),
+        ),
+        ),
+      ),
+      
+      Container(
+        child: Row(
+          children: [
+           Container(
+            margin: EdgeInsets.fromLTRB(20, 20, 0, 16),
+            child: Align(
+              alignment : Alignment.centerLeft,
+              child: Text( 
+               '최종 결제금액',
+               style: TextStyle(
+                 fontWeight: FontWeight.normal, // 폰트 굵기 변경
+                 fontSize: 15, // 폰트 크기 변경
+               ),
+              ),
+            ),
+           ),
+           Spacer(),
+           Container(
+            margin: EdgeInsets.fromLTRB(0, 20, 20, 16),
+            child: Align(
+              alignment : Alignment.centerRight,
+              child: Text( 
+               '13,900원',
+               style: TextStyle(
+                 fontWeight: FontWeight.normal, // 폰트 굵기 변경
+                 fontSize: 15, 
+               ),
+              ),
+            ),
+           ),
+           
+          ],
+          ),
+        
+      ),
+
+
       Align(
         alignment: Alignment.bottomCenter,
       child: Container(
-        width: 390,
+        width: MediaQuery.of(context).size.width,
         height: 49,
         color: Colors.blue,
           child: Center(
           child: Text(
-           '감동카드 보내기',
+           '13,900원 결제하기',
            style: TextStyle(
                   fontFamily: 'NanumGothic',
                   fontSize:25,
@@ -196,8 +221,6 @@ class _MyHomePageState extends State<MyHomePage> {
         
         ],
       ),
-
-     
-      );// This trailing comma makes auto-formatting nicer for build methods.
-  }
-}
+    );
+    }
+    }

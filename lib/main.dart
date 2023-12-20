@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 //import 'package:seonmulbug/wishlist.dart';
-import 'package:seonmulbug/fundinginput.dart';
+//import 'package:seonmulbug/fundinginput.dart';
 //import 'package:seonmulbug/fundingfinish.dart';
+//import 'rookie3.dart';
+import 'package:seonmulbug/givecard.dart';
+
 
 
 void main() {
-  runApp(MyApp2());
+  runApp(MyApp4());
 }

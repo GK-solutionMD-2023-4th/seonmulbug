@@ -26,7 +26,7 @@ class _MyHomePageState extends State<MyHomePage> {
         children: [
           SizedBox(height: 200),
           Text(
-          '펀딩 금액을 입력하세요',
+          '펀딩 금액을 입력해주세요',
            style: const TextStyle(
             fontSize: 25,
             fontWeight: FontWeight.bold

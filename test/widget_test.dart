@@ -7,6 +7,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:seonmulbug/rookie2.dart';
 import 'package:seonmulbug/main.dart';
 
 void main() {
