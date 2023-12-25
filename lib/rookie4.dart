@@ -479,15 +479,80 @@ class _MyHomePageState extends State<MyHomePage> {
                    color: Colors.black,
                    ),
                   ),
-                  SizedBox(height: 10),
+                  SizedBox(height: 14),
+
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+              Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
                ClipOval(
                  child: Image.network(
-                 'https://i.pinimg.com/564x/e6/24/77/e62477202c84e531fad84e35d47085b9.jpg', // 이미지 URL에 맞게 수정
-                  width: 50, // 이미지 너비에 맞게 수정
-                  height: 50, // 이미지 높이에 맞게 수정
+                 'https://i.pinimg.com/564x/e8/60/be/e860beedc637597bc225eee5d5481e62.jpg', // 이미지 URL에 맞게 수정
+                  width: 98, // 이미지 너비에 맞게 수정
+                  height: 98, // 이미지 높이에 맞게 수정
                   fit: BoxFit.cover, // 이미지 채우기 모드에 맞게 수정
                   ),
                  ),
+                 SizedBox(height: 10),
+                 Text(
+                  'Apple 애플\n워치 9 GPS'
+                 ),
+                 Text(
+                  '599,000원'
+                 ),
+                ],
+              ),
+ 
+                 SizedBox(width: 10),
+  
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                 ClipOval(
+                 child: Image.network(
+                 'https://i.pinimg.com/564x/aa/53/a1/aa53a18bcc6a07e2aca4531c61d70a71.jpg', // 이미지 URL에 맞게 수정
+                  width: 98, // 이미지 너비에 맞게 수정
+                  height: 98, // 이미지 높이에 맞게 수정
+                  fit: BoxFit.cover, // 이미지 채우기 모드에 맞게 수정
+                  ),
+                 ),
+                 SizedBox(height: 10),
+                 Text(
+                  'Apple 맥북\n프로 13 M2'
+                 ),
+                 Text(
+                  '1,833,990원'
+                 ),
+                ],
+              ),
+
+                 SizedBox(width: 10),
+
+                 Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                 ClipOval(
+                 child: Image.network(
+                 'https://i.pinimg.com/564x/38/67/1c/38671c5af20f2998fe8f82df4a1dff14.jpg', // 이미지 URL에 맞게 수정
+                  width: 98, // 이미지 너비에 맞게 수정
+                  height: 98, // 이미지 높이에 맞게 수정
+                  fit: BoxFit.cover, // 이미지 채우기 모드에 맞게 수정
+                  ),
+                 ),
+                 SizedBox(height: 10),
+                 Text(
+                  '[슈어] 무선\n노이즈 캔슬\n링 헤드폰 \n(AONIC 50)'
+                 ),
+                 Text(
+                  '469,000원'
+                 ),
+                ],
+              ),
+
+                  ],
+                  ),
 
              ]//children
              ),
