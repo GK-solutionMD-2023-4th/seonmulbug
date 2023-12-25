@@ -37,6 +37,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
+    Size screenSize = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
@@ -164,15 +165,335 @@ class _MyHomePageState extends State<MyHomePage> {
 
                   ],
                 ),
+                SizedBox(width: 8),
               ],
             ),
 
+          
             
             Container(
-             width: 200,
-             height: 100,
-             color: Colors.grey,
+             width: screenSize.width,
+             height: 567,
+             color: Color.fromARGB(255, 216, 216, 216),
+             child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+               SizedBox(height: 20),
+              Text(
+               '추천검색어',
+                style: TextStyle(
+                fontSize: 15,
+                fontWeight: FontWeight.bold,
+                color: Colors.black,
+               ),
+              ),
+              SizedBox(height: 14,),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children:[
+              Container(
+                padding: EdgeInsets.only(left: 11.0, right: 8.0, top: 3.0, bottom: 3.0),
+                width: 80,
+                decoration: BoxDecoration(
+                color: Colors.blue,
+                borderRadius: BorderRadius.circular(30.0),
+                ),
+                child: Row(
+
+                children: [
+                Text(
+                  '아이폰',
+                  style: TextStyle(
+                  fontSize: 12,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                  ),
+                  ),
+                 SizedBox(
+                 width: 24,
+                 height: 24,
+                 child: IconButton(
+                 padding: EdgeInsets.zero,
+                 constraints: BoxConstraints(),
+                 icon: Icon(Icons.clear,
+                     size: 14,
+                     color: Colors.white,),
+                 onPressed: () {
+                // TODO: IconButton 클릭 시 수행할 동작 추가
+                 },
+                 ),
+                ),
+              ],
+              ),
+              ),
+
+              SizedBox(width: 8,),
+
+              Container(
+                padding: EdgeInsets.only(left: 11.0, right: 8.0, top: 3.0, bottom: 3.0),
+                width: 80,
+                decoration: BoxDecoration(
+                color: Colors.blue,
+                borderRadius: BorderRadius.circular(30.0),
+                ),
+                child: Row(
+
+                children: [
+                Text(
+                  '아이폰',
+                  style: TextStyle(
+                  fontSize: 12,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                  ),
+                  ),
+                 SizedBox(
+                 width: 24,
+                 height: 24,
+                 child: IconButton(
+                 padding: EdgeInsets.zero,
+                 constraints: BoxConstraints(),
+                 icon: Icon(Icons.clear,
+                     size: 14,
+                     color: Colors.white,),
+                 onPressed: () {
+                // TODO: IconButton 클릭 시 수행할 동작 추가
+                 },
+                 ),
+                ),
+              ],
+              ),
+              ),
+
+              SizedBox(width: 8,),
+
+             Container(
+                padding: EdgeInsets.only(left: 11.0, right: 8.0, top: 3.0, bottom: 3.0),
+                width: 80,
+                decoration: BoxDecoration(
+                color: Colors.blue,
+                borderRadius: BorderRadius.circular(30.0),
+                ),
+                child: Row(
+
+                children: [
+                Text(
+                  '자전거',
+                  style: TextStyle(
+                  fontSize: 12,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                  ),
+                  ),
+                 SizedBox(
+                 width: 24,
+                 height: 24,
+                 child: IconButton(
+                 padding: EdgeInsets.zero,
+                 constraints: BoxConstraints(),
+                 icon: Icon(Icons.clear,
+                     size: 14,
+                     color: Colors.white,),
+                 onPressed: () {
+                // TODO: IconButton 클릭 시 수행할 동작 추가
+                 },
+                 ),
+                ),
+              ],
+              ),
+              ),
+
+              
+
+                ]
+             ),
+
+            SizedBox(height: 8,),
+
+
+             Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children:[
+              Container(
+                padding: EdgeInsets.only(left: 11.0, right: 8.0, top: 3.0, bottom: 3.0),
+                width: 90,
+                decoration: BoxDecoration(
+                color: Colors.blue,
+                borderRadius: BorderRadius.circular(30.0),
+                ),
+                child: Row(
+
+                children: [
+                Text(
+                  '애플워치',
+                  style: TextStyle(
+                  fontSize: 12,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                  ),
+                  ),
+                 SizedBox(
+                 width: 24,
+                 height: 24,
+                 child: IconButton(
+                 padding: EdgeInsets.zero,
+                 constraints: BoxConstraints(),
+                 icon: Icon(Icons.clear,
+                     size: 14,
+                     color: Colors.white,),
+                 onPressed: () {
+                // TODO: IconButton 클릭 시 수행할 동작 추가
+                 },
+                 ),
+                ),
+              ],
+              ),
+              ),
+
+              SizedBox(width: 8,),
+
+              Container(
+                padding: EdgeInsets.only(left: 11.0, right: 8.0, top: 3.0, bottom: 3.0),
+                width: 70,
+                decoration: BoxDecoration(
+                color: Colors.blue,
+                borderRadius: BorderRadius.circular(30.0),
+                ),
+                child: Row(
+
+                children: [
+                Text(
+                  '의자',
+                  style: TextStyle(
+                  fontSize: 12,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                  ),
+                  ),
+                 SizedBox(
+                 width: 24,
+                 height: 24,
+                 child: IconButton(
+                 padding: EdgeInsets.zero,
+                 constraints: BoxConstraints(),
+                 icon: Icon(Icons.clear,
+                     size: 14,
+                     color: Colors.white,),
+                 onPressed: () {
+                // TODO: IconButton 클릭 시 수행할 동작 추가
+                 },
+                 ),
+                ),
+              ],
+              ),
+              ),
+
+              SizedBox(width: 8,),
+
+             Container(
+                padding: EdgeInsets.only(left: 11.0, right: 8.0, top: 3.0, bottom: 3.0),
+                width: 70,
+                decoration: BoxDecoration(
+                color: Colors.blue,
+                borderRadius: BorderRadius.circular(30.0),
+                ),
+                child: Row(
+
+                children: [
+                Text(
+                  '신발',
+                  style: TextStyle(
+                  fontSize: 12,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                  ),
+                  ),
+                 SizedBox(
+                 width: 24,
+                 height: 24,
+                 child: IconButton(
+                 padding: EdgeInsets.zero,
+                 constraints: BoxConstraints(),
+                 icon: Icon(Icons.clear,
+                     size: 14,
+                     color: Colors.white,),
+                 onPressed: () {
+                // TODO: IconButton 클릭 시 수행할 동작 추가
+                 },
+                 ),
+                ),
+              ],
+              ),
+              ),
+
+              SizedBox(width: 8,),
+
+             Container(
+                padding: EdgeInsets.only(left: 11.0, right: 8.0, top: 3.0, bottom: 3.0),
+                width: 70,
+                decoration: BoxDecoration(
+                color: Colors.blue,
+                borderRadius: BorderRadius.circular(30.0),
+                ),
+                child: Row(
+
+                children: [
+                Text(
+                  '모자',
+                  style: TextStyle(
+                  fontSize: 12,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                  ),
+                  ),
+                 SizedBox(
+                 width: 24,
+                 height: 24,
+                 child: IconButton(
+                 padding: EdgeInsets.zero,
+                 constraints: BoxConstraints(),
+                 icon: Icon(Icons.clear,
+                     size: 14,
+                     color: Colors.white,),
+                 onPressed: () {
+                // TODO: IconButton 클릭 시 수행할 동작 추가
+                 },
+                 ),
+                ),
+              ],
+              ),
+              ),
+
+
+                ]
+             ),
+
+
+               SizedBox(height: 40),
+                Text(
+                 '추천하는 선물',
+                   style: TextStyle(
+                   fontSize: 15,
+                   fontWeight: FontWeight.bold,
+                   color: Colors.black,
+                   ),
+                  ),
+                  SizedBox(height: 10),
+               ClipOval(
+                 child: Image.network(
+                 'https://i.pinimg.com/564x/e6/24/77/e62477202c84e531fad84e35d47085b9.jpg', // 이미지 URL에 맞게 수정
+                  width: 50, // 이미지 너비에 맞게 수정
+                  height: 50, // 이미지 높이에 맞게 수정
+                  fit: BoxFit.cover, // 이미지 채우기 모드에 맞게 수정
+                  ),
+                 ),
+
+             ]//children
+             ),
             ),
+
+          
 
             
           ],
