@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:seonmulbug/wishlist.dart';
+
 
 class MyApp3 extends StatelessWidget {
   @override
@@ -36,40 +38,39 @@ class _MyHomePageState extends State<MyHomePage> {
          SizedBox(
           height: 20,
          ),
-         Container(
-          margin: EdgeInsets.fromLTRB(26, 130, 26, 0),
-          width: 337,
-          height: 49,
-          color: Colors.blue,
-          child: Center(
-            child: Text(
-              '홈 화면으로 이동하기',
-              style: TextStyle(
-               color: Colors.white, // 텍스트 색상 변경
-               fontWeight: FontWeight.normal, // 폰트 굵기 변경
-               fontSize: 25, // 폰트 크기 변경
-              ),
-            ),
-          ),
-         ),
-         Container(
-          margin: EdgeInsets.fromLTRB(26, 20, 26, 0),
-          width: 337,
-          height: 49,
-          color: Colors.blue,
-          child: Center(
-            child: Text(
-              '위시리스트로 이동하기',
-              style: TextStyle(
-               color: Colors.white, // 텍스트 색상 변경
-               fontWeight: FontWeight.normal, // 폰트 굵기 변경
-               fontSize: 25, // 폰트 크기 변경
-              ),
-            ),
-          ),
+         
+         ButtonDesign('홈 화면으로 이동하기'),
+         SizedBox(height: 20),
+
+         GestureDetector(
+         onTap:(){
+          Navigator.push(context,MaterialPageRoute(
+            builder: (context) => MyHomePage3()));
+         },
+         child: ButtonDesign('위시리스트로 이동하기'),
          ),
         ],
-        )
+        ),
     );
   }
+}
+
+Widget ButtonDesign(String text) {
+  return Container(
+          margin: EdgeInsets.fromLTRB(26, 0, 26, 0),
+          width: 337,
+          height: 49,
+          color: Colors.blue,
+          child: Center(
+            child: Text(
+              text,
+              style: TextStyle(
+               color: Colors.white, // 텍스트 색상 변경
+               fontWeight: FontWeight.normal, // 폰트 굵기 변경
+               fontSize: 25, // 폰트 크기 변경
+              ),
+            ),
+          ),
+         );
+        
 }

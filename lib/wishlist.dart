@@ -10,14 +10,14 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blueGrey,
       ),
-      home: MyHomePage(),
+      home: MyHomePage3(),
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
+class MyHomePage3 extends StatefulWidget {
   @override
-  State<MyHomePage> createState() => _MyHomePageState();
+  State<MyHomePage3> createState() => _MyHomePage3State();
 }
 
 var gift  = [ 
@@ -33,7 +33,7 @@ var gift  = [
     },
   ];
 
-class _MyHomePageState extends State<MyHomePage> {
+class _MyHomePage3State extends State<MyHomePage3> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
