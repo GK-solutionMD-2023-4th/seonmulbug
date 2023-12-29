@@ -1,3 +1,5 @@
+import 'dart:js';
+
 import 'package:flutter/material.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 
@@ -226,7 +228,7 @@ Widget postContainer({String giftname = '', String imageUrl = '', String price =
   );
 }
 
-class secondpage extends StatelessWidget {//선물 준 친구 페이지()
+class secondpage extends StatelessWidget {//선물 준 친구 페이지(감동카드 보내기 버튼 누르면 감동카드 페이지로)
 
   @override
   Widget build(BuildContext ctx) {
@@ -235,7 +237,8 @@ class secondpage extends StatelessWidget {//선물 준 친구 페이지()
         backgroundColor: Colors.white,
         title: Text(''),
         leading: IconButton(
-        icon: Icon(Icons.arrow_back_ios_new),
+        icon: Icon(Icons.arrow_back_ios_new,
+        color: Colors.black),
         onPressed:(){
           Navigator .pop(ctx);
         }
@@ -299,7 +302,11 @@ class secondpage extends StatelessWidget {//선물 준 친구 페이지()
                   ), 
                ),
                SizedBox(height: 8),
-               Container(
+                GestureDetector(
+                onTap: (){
+                Navigator.push(ctx, MaterialPageRoute(
+                  builder: (Context) => page()),);
+                },
                 child:
                ClipRRect(
                 borderRadius: BorderRadius.circular(30.0), // 원하는 각을 설정
@@ -315,13 +322,108 @@ class secondpage extends StatelessWidget {//선물 준 친구 페이지()
                 ),
                 ),
               ),
-              onPressed: (){
+              
+              ),
+                ],
+               ),
+
+
+                ],
+              ),
+              ],
+             ),
+             Row(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+               Container(
+                margin: EdgeInsets.all(13.0),
+                child: ClipOval(
+                  child: Container(
+                  width: 80,
+                  height: 80,
+                  color: Colors.amber,
+                  ),
+                ),
+              ),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+               Text(
+                '한서연',
+                  style: TextStyle(
+                  fontSize:17,
+                  fontWeight: FontWeight.bold
+                  ), 
+               ),
+               SizedBox(height: 8),
+               GestureDetector(
+                onTap: (){
                 Navigator.push(ctx, MaterialPageRoute(
-                  builder: (BuildContext ctx){
-                    return page();
-                  }
-                  )),
-              }),
+                  builder: (Context) => page()),);
+                 },
+               child:ClipRRect(
+                borderRadius: BorderRadius.circular(30.0), // 원하는 각을 설정
+                child: Container(
+                width: 120.0,
+                height: 40.0,
+                color: Colors.blue,
+                child: Center(
+                  child: Text(
+                   '감동카드 보내기',
+                    style: TextStyle(color: Colors.white),
+                  ),
+                ),
+                ),
+              ),
+               ),
+
+                ],
+              ),
+              ],
+             ),
+             Row(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+               Container(
+                margin: EdgeInsets.all(13.0),
+                child: ClipOval(
+                  child: Container(
+                  width: 80,
+                  height: 80,
+                  color: Colors.amber,
+                  ),
+                ),
+              ),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+               Text(
+                '한서연',
+                  style: TextStyle(
+                  fontSize:17,
+                  fontWeight: FontWeight.bold
+                  ), 
+               ),
+               SizedBox(height: 8),
+               GestureDetector(
+                onTap: (){
+                Navigator.push(ctx, MaterialPageRoute(
+                  builder: (Context) => page()),);
+                 },
+               child: ClipRRect(
+                borderRadius: BorderRadius.circular(30.0), // 원하는 각을 설정
+                child: Container(
+                width: 120.0,
+                height: 40.0,
+                color: Colors.blue,
+                child: Center(
+                  child: Text(
+                   '감동카드 보내기',
+                    style: TextStyle(color: Colors.white),
+                  ),
+                ),
+                ),
+              ),
                ),
 
 
@@ -353,7 +455,12 @@ class secondpage extends StatelessWidget {//선물 준 친구 페이지()
                   ), 
                ),
                SizedBox(height: 8),
-               ClipRRect(
+               GestureDetector(
+                onTap: (){
+                Navigator.push(ctx, MaterialPageRoute(
+                  builder: (Context) => page()),);
+                 },
+               child: ClipRRect(
                 borderRadius: BorderRadius.circular(30.0), // 원하는 각을 설정
                 child: Container(
                 width: 120.0,
@@ -367,6 +474,7 @@ class secondpage extends StatelessWidget {//선물 준 친구 페이지()
                 ),
                 ),
               )
+               ),
 
                 ],
               ),
@@ -396,7 +504,12 @@ class secondpage extends StatelessWidget {//선물 준 친구 페이지()
                   ), 
                ),
                SizedBox(height: 8),
-               ClipRRect(
+               GestureDetector(
+                onTap: (){
+                Navigator.push(ctx, MaterialPageRoute(
+                  builder: (Context) => page()),);
+                 },
+               child: ClipRRect(
                 borderRadius: BorderRadius.circular(30.0), // 원하는 각을 설정
                 child: Container(
                 width: 120.0,
@@ -410,6 +523,7 @@ class secondpage extends StatelessWidget {//선물 준 친구 페이지()
                 ),
                 ),
               )
+               ),
 
                 ],
               ),
@@ -439,7 +553,12 @@ class secondpage extends StatelessWidget {//선물 준 친구 페이지()
                   ), 
                ),
                SizedBox(height: 8),
-               ClipRRect(
+               GestureDetector(
+                onTap: (){
+                Navigator.push(ctx, MaterialPageRoute(
+                  builder: (Context) => page()),);
+                 },
+               child: ClipRRect(
                 borderRadius: BorderRadius.circular(30.0), // 원하는 각을 설정
                 child: Container(
                 width: 120.0,
@@ -453,7 +572,7 @@ class secondpage extends StatelessWidget {//선물 준 친구 페이지()
                 ),
                 ),
               )
-
+               ),
                 ],
               ),
               ],
@@ -482,7 +601,12 @@ class secondpage extends StatelessWidget {//선물 준 친구 페이지()
                   ), 
                ),
                SizedBox(height: 8),
-               ClipRRect(
+               GestureDetector(
+                onTap: (){
+                Navigator.push(ctx, MaterialPageRoute(
+                  builder: (Context) => page()),);
+                 },
+               child: ClipRRect(
                 borderRadius: BorderRadius.circular(30.0), // 원하는 각을 설정
                 child: Container(
                 width: 120.0,
@@ -496,91 +620,7 @@ class secondpage extends StatelessWidget {//선물 준 친구 페이지()
                 ),
                 ),
               )
-
-                ],
-              ),
-              ],
-             ),
-             Row(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-               Container(
-                margin: EdgeInsets.all(13.0),
-                child: ClipOval(
-                  child: Container(
-                  width: 80,
-                  height: 80,
-                  color: Colors.amber,
-                  ),
-                ),
-              ),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-               Text(
-                '한서연',
-                  style: TextStyle(
-                  fontSize:17,
-                  fontWeight: FontWeight.bold
-                  ), 
                ),
-               SizedBox(height: 8),
-               ClipRRect(
-                borderRadius: BorderRadius.circular(30.0), // 원하는 각을 설정
-                child: Container(
-                width: 120.0,
-                height: 40.0,
-                color: Colors.blue,
-                child: Center(
-                  child: Text(
-                   '감동카드 보내기',
-                    style: TextStyle(color: Colors.white),
-                  ),
-                ),
-                ),
-              )
-                ],
-              ),
-              ],
-             ),
-             Row(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-               Container(
-                margin: EdgeInsets.all(13.0),
-                child: ClipOval(
-                  child: Container(
-                  width: 80,
-                  height: 80,
-                  color: Colors.amber,
-                  ),
-                ),
-              ),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-               Text(
-                '한서연',
-                  style: TextStyle(
-                  fontSize:17,
-                  fontWeight: FontWeight.bold
-                  ), 
-               ),
-               SizedBox(height: 8),
-               ClipRRect(
-                borderRadius: BorderRadius.circular(30.0), // 원하는 각을 설정
-                child: Container(
-                width: 120.0,
-                height: 40.0,
-                color: Colors.blue,
-                child: Center(
-                  child: Text(
-                   '감동카드 보내기',
-                    style: TextStyle(color: Colors.white),
-                  ),
-                ),
-                ),
-              )
                 ],
               ),
               ],
@@ -609,7 +649,12 @@ class secondpage extends StatelessWidget {//선물 준 친구 페이지()
                   ), 
                ),
                SizedBox(height: 8),
-               ClipRRect(
+               GestureDetector(
+                onTap: (){
+                Navigator.push(ctx, MaterialPageRoute(
+                  builder: (Context) => page()),);
+                 },
+               child: ClipRRect(
                 borderRadius: BorderRadius.circular(30.0), // 원하는 각을 설정
                 child: Container(
                 width: 120.0,
@@ -623,6 +668,7 @@ class secondpage extends StatelessWidget {//선물 준 친구 페이지()
                 ),
                 ),
               )
+               ),
                 ],
               ),
               ],
@@ -631,26 +677,24 @@ class secondpage extends StatelessWidget {//선물 준 친구 페이지()
 
 
            ],
-          )
-        ],
-        ),
-      );// This trailing 
+          ),
+        );
   }
 }
 
-class MyWidget7 extends StatelessWidget {//감동카드 쓰기 페이지
-  const MyWidget7({super.key});
+class page extends StatelessWidget {//감동카드 쓰기 페이지(감동카드를 보냈습니다.페이지로)
 
 ///////
   @override
-  Widget build(BuildContext ctx) {
+  Widget build(BuildContext ctt) {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
         title: Text(''),
-        leading: IconButton(icon: Icon(Icons.arrow_back_ios_new), 
+        leading: IconButton(icon: Icon(Icons.arrow_back_ios_new,
+        color: Colors.black), 
         onPressed: (){
-          Navigator.pop(ctx)
+          Navigator.pop(ctt);
         }),
 
       ),
@@ -782,6 +826,11 @@ class MyWidget7 extends StatelessWidget {//감동카드 쓰기 페이지
         SizedBox(height: 72),
       Align(
         alignment: Alignment.bottomCenter,
+        child: GestureDetector(
+         onTap: (){
+          Navigator.push(ctt, MaterialPageRoute(
+            builder: (context) => ppage(),));
+         },
       child: Container(
         width: 390,
         height: 49,
@@ -799,11 +848,97 @@ class MyWidget7 extends StatelessWidget {//감동카드 쓰기 페이지
           ),
       )
       )
+        ),
         
         ],
       ),
 
      
       );// This trailing comma makes 
+  }
+}
+
+class ppage extends StatelessWidget {
+
+  @override
+  Widget build(BuildContext cot) {
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.white,
+        title: Text(''),
+        leading: IconButton(icon: Icon(Icons.arrow_back_ios_new), 
+        onPressed: (){
+          Navigator.pop(cot);
+        }),
+
+      ),
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.start,
+        children: [
+        Container(height: 200),
+       Align(
+        alignment: Alignment.bottomCenter,
+      child: Column(
+      children: [
+        Container(
+        width: 390,
+        height: 49,
+        color: Colors.white,
+          child: Center(
+          child: Text(
+           '감동카드를 보냈습니다🎉',
+           style: TextStyle(
+                  fontFamily: 'NanumGothic',
+                  fontSize:28,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.black,
+                  ), 
+          ),
+          ),
+      ),
+        SizedBox(height: 64),
+        Container(
+        width: 390,
+        height: 49,
+        color: Color.fromARGB(255, 13, 141, 246),
+          child: Center(
+          child: Text(
+           '홈화면으로 이동하기',
+           style: TextStyle(
+                  fontFamily: 'NanumGothic',
+                  fontSize:20,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                  ), 
+          ),
+          ),
+      ),
+      SizedBox(height: 17),
+      Container(
+        width: 390,
+        height: 49,
+        color: Colors.blue,
+          child: Center(
+          child: Text(
+           '위시리스트로 이동하기',
+           style: TextStyle(
+                  fontFamily: 'NanumGothic',
+                  fontSize:20,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                  ), 
+          ),
+          ),
+      ),
+      ],
+      ),
+      )
+        
+        ],
+      ),
+
+     
+      );
   }
 }
