@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:seonmulbug/givecard.dart';
 
 class MyApp2 extends StatelessWidget {
   @override
@@ -42,7 +43,15 @@ class _MyHomePageState extends State<MyHomePage> {
                ),
              ),
           ),
-          Container(
+
+        GestureDetector(
+        onTap:(){
+          Navigator.push(context,MaterialPageRoute(
+            builder: (context) => MyHomePage2()));
+
+        },
+
+        child :Container(
           margin: EdgeInsets.fromLTRB(26, 20, 26, 0),
           width: 337,
           height: 49,
@@ -58,6 +67,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
           ),
          ),
+      ),
         ]
       ),
     );

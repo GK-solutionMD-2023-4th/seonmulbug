@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+//import 'package:seonmulbug/fundinginput.dart';
 
 class MyApp4 extends StatelessWidget {
   @override
@@ -8,20 +9,38 @@ class MyApp4 extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blueGrey,
       ),
-      home: MyHomePage(),
+      home: MyHomePage2(),
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
+class MyHomePage2 extends StatefulWidget {
   @override
-  State<MyHomePage> createState() => _MyHomePageState();
+  State<MyHomePage2> createState() => _MyHomePage2State();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _MyHomePage2State extends State<MyHomePage2> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.white,
+        elevation: 0,
+        title: Text(
+          "한서연 님의 위시리스트",
+          style: TextStyle(
+           color: Colors.black, // 텍스트 색상 변경
+           fontWeight: FontWeight.bold, // 폰트 굵기 변경
+           fontSize: 25, // 폰트 크기 변경
+         ),
+        ),
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back_ios_new), 
+          color: Colors.black,
+          onPressed:(){
+          Navigator.pop(context);
+         }),
+      ),
       body: Column(
         children: [
       ListView(
@@ -33,74 +52,19 @@ class _MyHomePageState extends State<MyHomePage> {
           Column(
             crossAxisAlignment: CrossAxisAlignment.center,
            children: [
-            Container(
-              margin: EdgeInsets.all(22.0),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                Text(
-                '한서연님 에게 주는 선물',
-                  style: TextStyle(
-                  fontSize:25,
-                  fontWeight: FontWeight.bold
-                  ), 
-                  textAlign: TextAlign.center,
-               ),
-                ],
-              ),
-            ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                ClipRRect(
-                borderRadius: BorderRadius.circular(10.0), // 적절한 반경 값으로 수정
-                child: Image.network(
-                'https://i.pinimg.com/564x/e6/24/77/e62477202c84e531fad84e35d47085b9.jpg', // 이미지 URL에 맞게 수정
-                 width: 50, // 이미지 너비에 맞게 수정
-                 height: 50, // 이미지 높이에 맞게 수정
-                 fit: BoxFit.cover, // 이미지 채우기 모드에 맞게 수정
-                 ),
-                ),
+                CardDesign('https://i.pinimg.com/564x/e6/24/77/e62477202c84e531fad84e35d47085b9.jpg'),
                 SizedBox(width: 8),
-                ClipRRect(
-                borderRadius: BorderRadius.circular(10.0), // 적절한 반경 값으로 수정
-                child: Image.network(
-                'https://i.pinimg.com/564x/df/d5/41/dfd541e3fdc0453e0fecc0599159ab69.jpg', // 이미지 URL에 맞게 수정
-                 width: 50, // 이미지 너비에 맞게 수정
-                 height: 50, // 이미지 높이에 맞게 수정
-                 fit: BoxFit.cover, // 이미지 채우기 모드에 맞게 수정
-                 ),
-                ),
+                CardDesign('https://i.pinimg.com/564x/df/d5/41/dfd541e3fdc0453e0fecc0599159ab69.jpg'),
                 SizedBox(width: 8),
-                ClipRRect(
-                borderRadius: BorderRadius.circular(10.0), // 적절한 반경 값으로 수정
-                child: Image.network(
-                'https://i.pinimg.com/564x/6a/5b/d5/6a5bd523ecfa81600201fde8994a9a7e.jpg', // 이미지 URL에 맞게 수정
-                 width: 50, // 이미지 너비에 맞게 수정
-                 height: 50, // 이미지 높이에 맞게 수정
-                 fit: BoxFit.cover, // 이미지 채우기 모드에 맞게 수정
-                 ),
-                ),
+                CardDesign('https://i.pinimg.com/564x/6a/5b/d5/6a5bd523ecfa81600201fde8994a9a7e.jpg'),
                 SizedBox(width: 8),
-                ClipRRect(
-                borderRadius: BorderRadius.circular(10.0), // 적절한 반경 값으로 수정
-                child: Image.network(
-                'https://i.pinimg.com/564x/eb/a1/ad/eba1ad289a1c214ee1474c6c04706e55.jpg', // 이미지 URL에 맞게 수정
-                 width: 50, // 이미지 너비에 맞게 수정
-                 height: 50, // 이미지 높이에 맞게 수정
-                 fit: BoxFit.cover, // 이미지 채우기 모드에 맞게 수정
-                 ),
-                ),
+                CardDesign('https://i.pinimg.com/564x/eb/a1/ad/eba1ad289a1c214ee1474c6c04706e55.jpg'),
                 SizedBox(width: 8),
-                ClipRRect(
-                borderRadius: BorderRadius.circular(10.0), // 적절한 반경 값으로 수정
-                child: Image.network(
-                'https://i.pinimg.com/564x/b4/52/cb/b452cb96ae8a2d9cf66c0e5e322f7bca.jpg', // 이미지 URL에 맞게 수정
-                 width: 50, // 이미지 너비에 맞게 수정
-                 height: 50, // 이미지 높이에 맞게 수정
-                 fit: BoxFit.cover, // 이미지 채우기 모드에 맞게 수정
-                 ),
-                ),
+                CardDesign('https://i.pinimg.com/564x/b4/52/cb/b452cb96ae8a2d9cf66c0e5e322f7bca.jpg'),
+                SizedBox(width: 8),
               ],//children
               ),
               SizedBox(height: 20),
@@ -224,3 +188,16 @@ class _MyHomePageState extends State<MyHomePage> {
     );
     }
     }
+
+  Widget CardDesign(String imagelink) {
+  return ClipRRect(
+                borderRadius: BorderRadius.circular(10.0), // 적절한 반경 값으로 수정
+                child: Image.network(
+                imagelink, // 이미지 URL에 맞게 수정
+                 width: 50, // 이미지 너비에 맞게 수정
+                 height: 50, // 이미지 높이에 맞게 수정
+                 fit: BoxFit.cover, // 이미지 채우기 모드에 맞게 수정
+                 ),
+                );
+}
+
