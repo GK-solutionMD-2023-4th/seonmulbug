@@ -483,6 +483,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
               Column(
                 mainAxisAlignment: MainAxisAlignment.start,

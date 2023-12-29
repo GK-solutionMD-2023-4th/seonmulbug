@@ -226,7 +226,7 @@ Widget postContainer({String giftname = '', String imageUrl = '', String price =
   );
 }
 
-class secondpage extends StatelessWidget {
+class secondpage extends StatelessWidget {//선물 준 친구 페이지()
 
   @override
   Widget build(BuildContext ctx) {
@@ -299,6 +299,8 @@ class secondpage extends StatelessWidget {
                   ), 
                ),
                SizedBox(height: 8),
+               Container(
+                child:
                ClipRRect(
                 borderRadius: BorderRadius.circular(30.0), // 원하는 각을 설정
                 child: Container(
@@ -312,7 +314,16 @@ class secondpage extends StatelessWidget {
                   ),
                 ),
                 ),
-              )
+              ),
+              onPressed: (){
+                Navigator.push(ctx, MaterialPageRoute(
+                  builder: (BuildContext ctx){
+                    return page();
+                  }
+                  )),
+              }),
+               ),
+
 
                 ],
               ),
@@ -627,7 +638,7 @@ class secondpage extends StatelessWidget {
   }
 }
 
-class MyWidget7 extends StatelessWidget {
+class MyWidget7 extends StatelessWidget {//감동카드 쓰기 페이지
   const MyWidget7({super.key});
 
 ///////
@@ -637,7 +648,10 @@ class MyWidget7 extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.white,
         title: Text(''),
-        leading: IconButton(icon: Icon(Icons.arrow_back_ios_new), onPressed: null),
+        leading: IconButton(icon: Icon(Icons.arrow_back_ios_new), 
+        onPressed: (){
+          Navigator.pop(ctx)
+        }),
 
       ),
       body: Column(
