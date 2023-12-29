@@ -12,7 +12,6 @@ import 'rookiehome.dart';
 
 
 //import 'package:seonmulbug/givecard.dart';
->>>>>>> dd1faf3928c85bbbfe49f1d8147c0cb8628168b3
 //import 'package:seonmulbug/fundingfinish.dart';
 //import 'rookie3.dart';
 //import 'package:seonmulbug/givecard.dart';
@@ -20,6 +19,6 @@ import 'rookiehome.dart';
 
 
 void main() {
-  runApp(MyApp1());
+  runApp(MyApp5());
 
 }
