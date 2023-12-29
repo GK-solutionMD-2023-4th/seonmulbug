@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-//import 'package:seonmulbug/fundinginput.dart';
+import 'package:seonmulbug/fundingfinish.dart';
 
 class MyApp4 extends StatelessWidget {
   @override
@@ -165,10 +165,15 @@ class _MyHomePage2State extends State<MyHomePage2> {
 
       Align(
         alignment: Alignment.bottomCenter,
-      child: Container(
-        width: MediaQuery.of(context).size.width,
-        height: 49,
-        color: Colors.blue,
+      child: GestureDetector(
+         onTap:(){
+          Navigator.push(context, MaterialPageRoute(
+            builder: (context) => MyHomePage5()));
+         },
+         child: Container(   
+          width: MediaQuery.of(context).size.width,
+          height: 49,
+          color: Colors.blue,
           child: Center(
           child: Text(
            '13,900원 결제하기',
@@ -180,7 +185,8 @@ class _MyHomePage2State extends State<MyHomePage2> {
                   ), 
           ),
           ),
-      )
+         ),
+         ),
       )
         
         ],

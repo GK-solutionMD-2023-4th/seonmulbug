@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:percent_indicator/percent_indicator.dart';
+import 'package:seonmulbug/fundinginput.dart';
 
 
 class MyApp extends StatelessWidget {
@@ -74,18 +75,18 @@ class _MyHomePage3State extends State<MyHomePage3> {
                   giftname: gift[index]["giftname"] as String, //제목은 gift 리스트에 저장되어 있는 "title"이고, 문자열이다.
                   imageUrl: gift[index]["imageUrl"] as String,
                   price: gift[index]["price"] as String,  
+                  context: context
           );
               },
             ),
           ),
         ],
       ),
-      
     );
   }
 }
 
-Widget postContainer({String giftname = '', String imageUrl = '', String price = ''}) {
+Widget postContainer({String giftname = '', String imageUrl = '', String price = '', required BuildContext context}) {
   return Column(
     children: [
       Row(
@@ -157,23 +158,29 @@ Widget postContainer({String giftname = '', String imageUrl = '', String price =
           ),
         ],
       ),
-      FloatingActionButton.extended(
-        onPressed: () {},
-        label: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            SizedBox(width: 8),
-            Text('펀딩하기'),
-          ],
-        ),
-        icon: SizedBox(
-          height: 70,
-          width: 250,
-        ),
-        backgroundColor: Colors.blue,
-        elevation: 0,
-        shape: RoundedRectangleBorder(),
-      ),
+
+      GestureDetector(
+         onTap:(){
+          Navigator.push(context, MaterialPageRoute(
+            builder: (context) => MyHomePage4()));
+         },
+         child: Container(   
+          width: 360,
+          height: 49,
+          color: Colors.blue,
+          child: Center(
+            child: Text(
+              '펀딩하기',
+              style: TextStyle(
+               color: Colors.white, // 텍스트 색상 변경
+               fontWeight: FontWeight.normal, // 폰트 굵기 변경
+               fontSize: 20, // 폰트 크기 변경
+              ),
+            ),
+          ),
+         ),
+         ),
+      
     ],
   );
 }
