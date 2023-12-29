@@ -6,6 +6,7 @@ import 'package:seonmulbug/fundingfinish.dart';
 import 'package:seonmulbug/givecard.dart';
 import 'rookie5.dart';
 //import 'rookie4.dart';
+import 'rookiehome.dart';
 
 
 //import 'package:seonmulbug/givecard.dart';
@@ -16,6 +17,6 @@ import 'rookie5.dart';
 //import 'rookie5.dart';
 
 void main() {
-  runApp(MyApp5());
+  runApp(MyApp10());
 }
 

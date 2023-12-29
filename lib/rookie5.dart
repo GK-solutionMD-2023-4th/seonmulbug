@@ -827,9 +827,9 @@ class page extends StatelessWidget {//감동카드 쓰기 페이지(감동카드
       Align(
         alignment: Alignment.bottomCenter,
         child: GestureDetector(
-         onTap: (){
+         onTap: () {
           Navigator.push(ctt, MaterialPageRoute(
-            builder: (context) => ppage(),));
+            builder: (context) => ppage()));
          },
       child: Container(
         width: 390,
