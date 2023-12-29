@@ -4,9 +4,13 @@ import 'package:flutter/material.dart';
 import 'package:seonmulbug/fundingfinish.dart';
 //import 'rookie3.dart';
 //import 'package:seonmulbug/givecard.dart';
-
-
+//import 'package:seonmulbug/fundingfinish.dart';
+//import 'rookie2.dart';
+//import 'rookie3.dart';
+//import 'package:seonmulbug/givecard.dart';
+//import 'rookie5.dart';
 
 void main() {
   runApp(MyApp3());
 }
+
