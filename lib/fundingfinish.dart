@@ -10,18 +10,18 @@ class MyApp3 extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blueGrey,
       ),
-      home: MyHomePage(),
+      home: MyHomePage5(),
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
+class MyHomePage5 extends StatefulWidget {
   @override
-  State<MyHomePage> createState() => _MyHomePageState();
+  State<MyHomePage5> createState() => _MyHomePage5State();
 }
 
 
-class _MyHomePageState extends State<MyHomePage> {
+class _MyHomePage5State extends State<MyHomePage5> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -43,8 +43,8 @@ class _MyHomePageState extends State<MyHomePage> {
          SizedBox(height: 20),
 
          GestureDetector(
-         onTap:(){
-          Navigator.push(context,MaterialPageRoute(
+          onTap:(){
+          Navigator.push(context, MaterialPageRoute(
             builder: (context) => MyHomePage3()));
          },
          child: ButtonDesign('위시리스트로 이동하기'),
