@@ -19,7 +19,7 @@ class ProductSearchPage extends StatefulWidget {
 }
 
 class _ProductSearchPageState extends State<ProductSearchPage> {
-  TextEditingController _searchController = TextEditingController();
+  
 
   @override
   Widget build(BuildContext context) {
@@ -64,6 +64,7 @@ class _ProductSearchPageState extends State<ProductSearchPage> {
               ),
              ],
              ),
+            ),
             ),
             SizedBox(height: 10),
             Text(
@@ -127,7 +128,6 @@ class _ProductSearchPageState extends State<ProductSearchPage> {
               ),
               ),
             ),
-            ),
           ],
         ),
       ),
@@ -143,17 +143,14 @@ class page extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.white,
         title: Text(''),
-        leading:
-            IconButton(icon: Icon(Icons.arrow_back_ios_new), onPressed: null),
-        actions: [
-          IconButton(
-            icon: Icon(Icons.search),
-            onPressed: () {
-              // TODO: 돋보기 아이콘을 눌렀을 때 수행할 동작을 추가하세요.
-              print('돋보기 아이콘을 눌렀습니다.');
-            },
-          ),
-        ],
+        leading: 
+            IconButton(
+              icon: Icon(Icons.arrow_back_ios_new), 
+              onPressed: (){
+                Navigator.pop(context);
+              },
+              color: Colors.black,
+              ),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
