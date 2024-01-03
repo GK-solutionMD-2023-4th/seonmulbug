@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:seonmulbug/rookie5.dart';
 
 class MyApp10 extends StatelessWidget {
   @override
@@ -101,7 +102,13 @@ class _ProductSearchPageState extends State<ProductSearchPage> {
                   ),
             ),
             SizedBox(height: 8),
-            Container(
+            GestureDetector(
+              // onTap: (){
+              //       Navigator.push(context, MaterialPageRoute(
+              //         builder: (context) => pppage()
+              //         ));
+              //     },
+            child: Container(
               width: MediaQuery.of(context).size.width,
               height: 49,
               decoration: BoxDecoration(
@@ -117,6 +124,7 @@ class _ProductSearchPageState extends State<ProductSearchPage> {
                   ),
                 ),
               ),
+            ),
             ),
             SizedBox(height: 5),
             Align(
