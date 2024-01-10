@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:percent_indicator/percent_indicator.dart';
+import 'package:seonmulbug/fundinginput.dart';
 
 
 class MyApp extends StatelessWidget {
@@ -10,30 +11,30 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blueGrey,
       ),
-      home: MyHomePage(),
+      home: MyHomePage3(),
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
+class MyHomePage3 extends StatefulWidget {
   @override
-  State<MyHomePage> createState() => _MyHomePageState();
+  State<MyHomePage3> createState() => _MyHomePage3State();
 }
 
 var gift  = [ 
     {
       "giftname": "Apple 애플워치 9 GPS",
-      "price": "599,000",
+      "price": "599,000원",
       "imageUrl": 'assets/image/image_applewatch.png',
     },
     {
       "giftname": "Apple 맥북 프로 13 M2",
-      "price": '1,833,990',
+      "price": '1,833,990원',
       "imageUrl": 'assets/image/image_Macbook.png',
     },
   ];
 
-class _MyHomePageState extends State<MyHomePage> {
+class _MyHomePage3State extends State<MyHomePage3> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -74,26 +75,36 @@ class _MyHomePageState extends State<MyHomePage> {
                   giftname: gift[index]["giftname"] as String, //제목은 gift 리스트에 저장되어 있는 "title"이고, 문자열이다.
                   imageUrl: gift[index]["imageUrl"] as String,
                   price: gift[index]["price"] as String,  
+                  context: context
           );
               },
             ),
           ),
         ],
       ),
-      
     );
   }
 }
 
-Widget postContainer({String giftname = '', String imageUrl = '', String price = ''}) {
+Widget postContainer({String giftname = '', String imageUrl = '', String price = '', required BuildContext context}) {
   return Column(
     children: [
       Row(
         children: [
           Container(
-            padding:EdgeInsets.fromLTRB(20, 20, 0, 10),
-            width: 130,
-            height: 130,
+            margin:EdgeInsets.fromLTRB(26, 37, 0, 10),
+            width: 98,
+            height: 95,
+            decoration: BoxDecoration(
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.grey,  // 그림자 색상
+                  offset: Offset(0, 4),  // 그림자 위치 (수평, 수직)
+                  blurRadius: 5,  // 그림자 흐림 정도
+                  spreadRadius: 0,  // 그림자 확산 정도
+                ),
+              ],
+            ),
             child: Image.asset(
               imageUrl,
               fit: BoxFit.cover,
@@ -110,18 +121,19 @@ Widget postContainer({String giftname = '', String imageUrl = '', String price =
                   giftname,
                   style: const TextStyle(
                     fontSize: 20,
+                    //fontFamily: ,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
                 ),
                 LinearPercentIndicator(
-                  width: 250,
+                  width: 220,
                   lineHeight: 20,
                   percent: 0.9,
                   progressColor: Colors.blue,
                 ),
                 Container(
-                 padding: EdgeInsets.fromLTRB(170, 5, 0, 5),
+                 padding: EdgeInsets.fromLTRB(150, 5, 0, 5),
                  child: Text(
                  price,
                  textAlign: TextAlign.right,
@@ -146,23 +158,29 @@ Widget postContainer({String giftname = '', String imageUrl = '', String price =
           ),
         ],
       ),
-      FloatingActionButton.extended(
-        onPressed: () {},
-        label: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            SizedBox(width: 8),
-            Text('펀딩하기'),
-          ],
-        ),
-        icon: SizedBox(
-          height: 70,
-          width: 250,
-        ),
-        backgroundColor: Colors.blue,
-        elevation: 0,
-        shape: RoundedRectangleBorder(),
-      ),
+
+      GestureDetector(
+         onTap:(){
+          Navigator.push(context, MaterialPageRoute(
+            builder: (context) => MyHomePage4()));
+         },
+         child: Container(   
+          width: 360,
+          height: 49,
+          color: Colors.blue,
+          child: Center(
+            child: Text(
+              '펀딩하기',
+              style: TextStyle(
+               color: Colors.white, // 텍스트 색상 변경
+               fontWeight: FontWeight.normal, // 폰트 굵기 변경
+               fontSize: 20, // 폰트 크기 변경
+              ),
+            ),
+          ),
+         ),
+         ),
+      
     ],
   );
 }
